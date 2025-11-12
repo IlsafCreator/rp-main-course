@@ -1,0 +1,24 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Valuator.Enums
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="text-center">
+    <form method="post">
+        <div class="col-2">Текст для оценки:</div>
+        <div class="col-10">
+            <textarea name="text" rows="5" cols="50"></textarea>
+            <select name="country">
+                <option value="@CountryEnum.RUS">Russian</option>
+                <option value="@CountryEnum.EU">France</option>
+                <option value="@CountryEnum.EU">Germany</option>
+                <option value="@CountryEnum.OTHER">USA</option>
+                <option value="@CountryEnum.OTHER">India</option>
+            </select>
+            <input type="submit" />
+        </div>
+    </form>
+</div>
